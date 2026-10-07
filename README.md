@@ -18,42 +18,48 @@
   <p>Our main goal is to release Grizzly as a quality product that's easy to live with yet flexible so you can make it your own.
 </p>
 
-  <p>Grizzly ships with</p>
-  
-  - Native:
-    - TileToShare which makes it super easy to share specific tiles during online meetings.
-    - The grizzly cli which makes it wonderfully simple to work with and save the state of Grizzly and also has built in extensibility to support your own workflows. The cli has first class support for many things out of the box, e.g. apt package management with transactional commit/rollback.
-    - Theming
-    - System settings, updates etc.
-  - Hyprland + Quickshell
-  - VS Codium
-  - Firefox
-  - 1Password
-  - Foot
-  - git
-  - Lazygit
-  - docker, compose and sandbox
-  - Openssh, disabled and locked down to you can configure it however you want
-  - Dolphin and Double Commander filemanagers
-  - paint.software (blazingly fast really nice paint.net alternative for Linux)
-  - Easy Effects for full control of your audio stream in meetings, recordings etc
-  - 7zip
-  - Libre Office
-  - Keybindings
-  - And more...
+  <p>Grizzly ships with:</p>
+  <ul>
+    <li>Native features:
+      <ul>
+        <li>TileToShare for sharing specific tiles during online meetings.</li>
+        <li>The Grizzly CLI for managing your system, saving its state, and extending it to support your workflows. It includes first-class support for many tasks out of the box, including APT package management with transactional commit and rollback.</li>
+        <li>Theming.</li>
+        <li>System settings and updates.</li>
+      </ul>
+    </li>
+    <li>Hyprland and Quickshell.</li>
+    <li>VS Codium.</li>
+    <li>Firefox.</li>
+    <li>1Password.</li>
+    <li>Foot.</li>
+    <li>Git and Lazygit.</li>
+    <li>Docker, Compose, and sandbox.</li>
+    <li>OpenSSH, disabled and locked down so you can configure it as you like.</li>
+    <li>Dolphin and Double Commander file managers.</li>
+    <li>Paint software, a fast paint.net alternative for Linux.</li>
+    <li>Easy Effects for controlling your audio during meetings and recordings.</li>
+    <li>7-Zip and LibreOffice.</li>
+    <li>Keybindings, and more.</li>
+  </ul>
 
-  We have deliberately chosen not to ship with
-  - Any AI harness
-  - Any docker management frontend. We like Portainer rather than Docker desktop. We like Dozzle too to view the docker logs.
+  <p><strong>We have deliberately chosen not to ship with:</strong></p>
+  <ul>
+    <li>Any AI harness.</li>
+    <li>A Docker management frontend. We prefer Portainer over Docker Desktop, and Dozzle for viewing container logs.</li>
+  </ul>
 
-  Future plans
-  - Bundles that you can install using the cli
-  - A net installer that let's you pick those bundles at install time 
-  
-  Grizzly installs extremely fast!
+  <p><strong>Future plans:</strong></p>
+  <ul>
+    <li>Installable bundles managed through the CLI.</li>
+    <li>A net installer that lets you choose bundles during installation.</li>
+  </ul>
 
-  - lab tests from iso on disk to VM disk: < 1 minute
-  - Clean USB-3 install to real hardware: TBD
+  <p><strong>Grizzly installs extremely fast:</strong></p>
+  <ul>
+    <li>Lab test from ISO to a virtual machine disk: under 1 minute.</li>
+    <li>Clean USB 3 install to real hardware: TBD.</li>
+  </ul>
 
-  Shipping soon!
+  <p><strong>Shipping soon!</strong></p>
 </section>
