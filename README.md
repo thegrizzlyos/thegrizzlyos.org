@@ -1,6 +1,6 @@
 <header class="masthead">
   <h1>GRIZZLY</h1>
-  <p>Your AI development OS 🐾</p>
+  <p>The developer friendly OS 🐾</p>
 </header>
 
 <div class="artwork-stage" aria-label="Grizzly mascot artwork">
@@ -10,10 +10,10 @@
 <section class="idea-card" aria-labelledby="idea-title">
   <p class="eyebrow"><strong>01 / THE IDEA</strong></p>
 
-  <h2 id="idea-title">Built for focus</h2>
+  <h2 id="idea-title">Created for focus</h2>
   <p>Grizzly is an opinionated Linux distribution aiming to maximize developer productivity by removing nearly all normal desktop GUI and keeping only what's truly important: 100% focus on your work.</p>
   <p>Grizzly is built on Debian, inheriting decades of rock-solid Linux, with performance optimized out of the box.</p>
-  <p>Our main goal is to release Grizzly as a quality product that's easy to live with yet flexible so you can make it your own.</p>
+  <p>We release Grizzly as a quality product that's easy to live with yet flexible so you can make it your own.</p>
   <p>The tiling manager automagically docks your windows into place, and you can move them around to your liking, and pre-configure up to 10 workspaces for how you work.</p>
   <p>In our view this is fundamentally a much better way to work for developers than the broken mouse centric desktop metaphor.</p>
   
