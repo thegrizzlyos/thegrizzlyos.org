@@ -1,124 +1,302 @@
----
----
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#111517" />
-    <title>Grizzly — Your AI development OS</title>
+    <meta name="theme-color" content="#f5f3ed" />
+    <meta name="description" content="Grizzly is a focused, developer-friendly Linux distribution built on Debian." />
+    <title>Grizzly — Linux for focused work</title>
     <style>
       :root {
-        color-scheme: dark;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #111517;
-        color: #f4f2ed;
+        color-scheme: light;
+        --ink: #202522;
+        --muted: #68706a;
+        --paper: #f5f3ed;
+        --card: #fffefa;
+        --line: #deded5;
+        --green: #385848;
+        --green-dark: #294535;
+        --lime: #dce8a7;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
       }
 
-      * { box-sizing: border-box; }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; min-width: 320px; background: var(--paper); }
+      a { color: inherit; }
+      a:focus-visible { outline: 3px solid #a0b96c; outline-offset: 4px; border-radius: 4px; }
 
-      html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        overflow: hidden;
-        background: #111517;
-      }
-
-      body { min-height: 100vh; }
-
-      .page {
-        width: 100%;
-        height: 100vh;
-        min-height: 100vh;
-        padding: 26px clamp(22px, 4vw, 52px) 44px;
-        overflow: hidden;
+      .site-header {
+        width: min(1200px, calc(100% - 64px));
+        min-height: 82px;
+        margin: 0 auto;
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        border-bottom: 1px solid rgba(32, 37, 34, .1);
       }
+      .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 750; letter-spacing: -.04em; }
+      .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; background: var(--green); color: white; font-size: 20px; }
+      .brand-name { font-size: 19px; }
+      .main-nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 38px); }
+      .main-nav a { color: #505a53; font-size: 14px; font-weight: 600; text-decoration: none; }
+      .main-nav a:hover { color: var(--green); }
+      .nav-cta { padding: 10px 16px; border: 1px solid #bdc9bd; border-radius: 999px; }
 
-      .masthead {
-        flex: 0 0 auto;
-        padding: 0 0 16px;
-        text-align: center;
-      }
-
-      .masthead h1 {
-        margin: 0;
-        font-size: 32px;
-        line-height: 1.2;
-      }
-
-      .masthead p { margin: 10px 0 0; }
-
-      .artwork-stage {
+      .page { overflow: hidden; }
+      .hero {
         position: relative;
-        flex: 0 0 130px;
-        height: 130px;
-        margin: 0 0 24px;
-        background: transparent;
+        width: min(1200px, calc(100% - 64px));
+        min-height: 570px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.02fr .98fr;
+        align-items: center;
+        gap: 30px;
+        padding: 55px 0 74px;
       }
+      .hero-copy { position: relative; z-index: 1; max-width: 620px; }
+      .eyebrow { margin: 0 0 20px; color: var(--green); font-size: 12px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+      .hero h1 { max-width: 630px; margin: 0; font-size: clamp(48px, 6.5vw, 82px); line-height: .99; letter-spacing: -.065em; }
+      .hero h1 span { color: var(--green); }
+      .hero-lede { max-width: 540px; margin: 25px 0 0; color: #5e665f; font-size: clamp(17px, 1.7vw, 20px); line-height: 1.6; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+      .button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 9px; padding: 0 21px; border: 1px solid transparent; border-radius: 999px; font-size: 14px; font-weight: 750; text-decoration: none; transition: transform .18s ease, background .18s ease; }
+      .button:hover { transform: translateY(-2px); }
+      .button-primary { background: var(--green); color: white; }
+      .button-primary:hover { background: var(--green-dark); }
+      .button-secondary { border-color: #c8cec5; background: rgba(255,255,255,.45); }
+      .button-secondary:hover { background: white; }
+      .availability { display: flex; align-items: center; gap: 8px; margin: 15px 0 0; color: #747a72; font-size: 12px; }
+      .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #a2ae72; }
 
-      .bear {
-        position: absolute;
-        top: -100px;
-        right: 0;
-        display: block;
-        width: min(24vw, 240px);
-        height: auto;
-        background: transparent;
+      .hero-art { position: relative; min-height: 420px; display: grid; place-items: center; }
+      .art-orbit { position: absolute; width: min(39vw, 430px); aspect-ratio: 1; border: 1px solid rgba(56, 88, 72, .22); border-radius: 50%; }
+      .art-orbit::before, .art-orbit::after { position: absolute; content: ""; border: 1px solid rgba(56, 88, 72, .13); border-radius: 50%; }
+      .art-orbit::before { inset: 8%; }
+      .art-orbit::after { inset: 17%; }
+      .art-sun { position: absolute; top: 7%; right: 8%; width: 68px; aspect-ratio: 1; border-radius: 50%; background: var(--lime); }
+      .hero-art img { position: relative; z-index: 1; display: block; width: min(100%, 480px); height: auto; filter: drop-shadow(0 22px 18px rgba(38, 45, 39, .13)); }
+      .art-caption { position: absolute; right: 1%; bottom: 9%; z-index: 2; padding: 11px 15px; border: 1px solid rgba(32,37,34,.1); border-radius: 14px; background: rgba(255,254,250,.86); color: #566158; font-size: 12px; box-shadow: 0 10px 32px rgba(33, 43, 35, .06); }
+
+      .feature-wrap { padding: 0 32px 94px; }
+      .feature-panel { width: min(1200px, 100%); margin: 0 auto; padding: clamp(28px, 5vw, 56px); border: 1px solid var(--line); border-radius: 28px; background: var(--card); }
+      .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
+      .section-heading .eyebrow { margin-bottom: 10px; }
+      .section-heading h2 { margin: 0; font-size: clamp(30px, 4vw, 44px); letter-spacing: -.05em; line-height: 1.1; }
+      .section-heading > p { max-width: 350px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+      .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .feature-card { min-height: 190px; padding: 22px; border: 1px solid #e6e7df; border-radius: 18px; background: #fbfaf5; }
+      .feature-icon { display: grid; width: 38px; height: 38px; place-items: center; margin-bottom: 20px; border-radius: 12px; background: #e9efdf; color: var(--green); font-size: 18px; }
+      .feature-card h3 { margin: 0 0 8px; font-size: 17px; letter-spacing: -.025em; }
+      .feature-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+
+      .details { width: min(1200px, calc(100% - 64px)); margin: 0 auto; padding: 0 0 92px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; }
+      .details h2 { margin: 0; font-size: clamp(32px, 4vw, 48px); letter-spacing: -.055em; line-height: 1.05; }
+      .details-intro > p:last-child { max-width: 390px; color: var(--muted); line-height: 1.65; }
+      .toolkit { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin: 0; padding: 0; list-style: none; }
+      .toolkit li { padding: 15px 0; border-bottom: 1px solid var(--line); color: #4c554e; font-size: 14px; }
+      .toolkit strong { color: var(--ink); }
+      .not-included { margin-top: 25px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+
+      .get-started { padding: 0 32px 92px; }
+      .get-panel { width: min(1200px, 100%); margin: 0 auto; padding: clamp(30px, 6vw, 68px); border-radius: 28px; background: #263c30; color: white; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+      .get-panel .eyebrow { color: #c8d7ac; }
+      .get-panel h2 { max-width: 600px; margin: 0; font-size: clamp(32px, 4.5vw, 54px); line-height: 1.05; letter-spacing: -.05em; }
+      .get-panel p { max-width: 600px; margin: 15px 0 0; color: #d1d9d0; line-height: 1.6; }
+      .get-panel .button { flex: 0 0 auto; background: white; color: var(--green-dark); }
+      .get-panel .button:hover { background: var(--lime); }
+
+      .site-footer { width: min(1200px, calc(100% - 64px)); min-height: 92px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+      .footer-links { display: flex; gap: 22px; }
+      .footer-links a { color: #465149; font-weight: 650; text-decoration: none; }
+      .footer-links a:hover { color: var(--green); }
+
+      @media (max-width: 760px) {
+        .site-header, .hero, .details, .site-footer { width: min(100% - 40px, 580px); }
+        .site-header { min-height: 72px; }
+        .main-nav { gap: 15px; }
+        .main-nav a { font-size: 12px; }
+        .main-nav a:first-child { display: none; }
+        .nav-cta { padding: 8px 11px; }
+        .hero { min-height: 0; grid-template-columns: 1fr; gap: 0; padding: 65px 0 28px; }
+        .hero h1 { max-width: 590px; font-size: clamp(49px, 12vw, 76px); }
+        .hero-art { min-height: 310px; margin-top: 4px; }
+        .art-orbit { width: min(77vw, 350px); }
+        .hero-art img { width: min(94%, 380px); }
+        .art-caption { right: 0; bottom: 7%; }
+        .feature-wrap, .get-started { padding-right: 20px; padding-left: 20px; }
+        .feature-panel { border-radius: 22px; }
+        .section-heading { align-items: start; flex-direction: column; gap: 12px; }
+        .feature-grid { grid-template-columns: 1fr 1fr; }
+        .feature-card { min-height: 0; padding: 18px; }
+        .details { grid-template-columns: 1fr; gap: 28px; padding-bottom: 70px; }
+        .get-panel { align-items: start; flex-direction: column; border-radius: 22px; }
+        .get-panel .button { margin-top: 4px; }
+        .site-footer { align-items: start; flex-direction: column; justify-content: center; padding: 22px 0; }
       }
-
-      .idea-card {
-        flex: 1 1 auto;
-        min-height: 0;
-        width: 100%;
-        margin: 0;
-        padding: 28px;
-        border: 1px solid #394143;
-        border-radius: 18px;
-        background: #252b2d;
-        color: #f4f2ed;
-        overflow-y: auto;
-        overscroll-behavior: contain;
-        -webkit-overflow-scrolling: touch;
+      @media (max-width: 460px) {
+        .site-header, .hero, .details, .site-footer { width: calc(100% - 32px); }
+        .brand-mark { width: 30px; height: 30px; }
+        .brand-name { font-size: 17px; }
+        .main-nav { gap: 10px; }
+        .main-nav a { font-size: 11px; }
+        .hero { padding-top: 52px; }
+        .hero-actions { align-items: stretch; flex-direction: column; }
+        .hero-actions .button { width: 100%; }
+        .hero-art { min-height: 260px; }
+        .feature-grid, .toolkit { grid-template-columns: 1fr; }
+        .feature-card { padding: 20px; }
+        .feature-wrap, .get-started { padding-right: 16px; padding-left: 16px; }
+        .footer-links { flex-wrap: wrap; gap: 14px 20px; }
       }
-
-      .eyebrow {
-        color: #b9c5bd;
-        font-size: 12px;
-        letter-spacing: .12em;
-      }
-
-      .idea-card h2 {
-        padding-bottom: 8px;
-        border-bottom: 1px solid #687173;
-      }
-
-      .idea-card ul {
-        padding-left: 1.35rem;
-      }
-
-      .idea-card li + li {
-        margin-top: .35em;
-      }
-
-      .idea-card ul ul {
-        margin-top: .4em;
-      }
-
-      @media (max-width: 600px) {
-        .page { padding: 20px 16px 32px; }
-        .artwork-stage { height: 130px; }
-        .bear { top: -76px; width: min(42vw, 210px); }
-        .idea-card { padding: 22px; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition-duration: .01ms !important; }
       }
     </style>
   </head>
   <body>
-    <main class="page">
-      {% capture readme_content %}{% include_relative README.md %}{% endcapture %}
-      {{ readme_content | markdownify }}
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Grizzly home">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span class="brand-name">Grizzly</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#getting-started">Docs</a>
+        <a href="https://github.com/tofalck/thegrizzlyos.org/issues">Community</a>
+        <a class="nav-cta" href="#getting-started">Get Grizzly</a>
+      </nav>
+    </header>
+    <main id="top" class="page">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A developer-friendly Linux distribution</p>
+          <h1 id="hero-title">Make room for <span>good work.</span></h1>
+          <p class="hero-lede">Grizzly is an opinionated Debian-based desktop built to keep your tools close and distractions out of the way.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#getting-started">Get Grizzly <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#features">Explore features</a>
+          </div>
+          <p class="availability"><span class="status-dot" aria-hidden="true"></span>Downloads and installation guide are coming soon</p>
+        </div>
+        <div class="hero-art" aria-label="Grizzly mascot artwork">
+          <span class="art-orbit" aria-hidden="true"></span>
+          <span class="art-sun" aria-hidden="true"></span>
+          <img src="assets/grizzly-boot.png" alt="Grizzly, the friendly bear mascot, wearing glasses and a hoodie" width="600" height="548" />
+          <span class="art-caption">A focused workspace, ready for you</span>
+        </div>
+      </section>
+
+      <section id="features" class="feature-wrap" aria-labelledby="features-title">
+        <div class="feature-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">01 / The experience</p>
+              <h2 id="features-title">A desktop that gets out of your way.</h2>
+            </div>
+            <p>Thoughtful defaults and a practical set of tools help you get to your work without spending the day tuning your desktop.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">▦</span>
+              <h3>Stay in flow</h3>
+              <p>Hyprland and Quickshell bring a keyboard-friendly, tiling workflow with workspaces you can shape around your day.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">⌘</span>
+              <h3>Grizzly tools, built in</h3>
+              <p>Use the Grizzly CLI and MCP to manage your system, back up its inventory, and repeat your setup across machines.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">↻</span>
+              <h3>Safer system changes</h3>
+              <p>Manage APT packages with transactional commits and rollbacks, so changes are easier to track and recover.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">▣</span>
+              <h3>Meetings made easier</h3>
+              <p>TileToShare lets you share a specific tile during online meetings, keeping the rest of your workspace private.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">◌</span>
+              <h3>Yours to make your own</h3>
+              <p>Adjust the included themes, keybindings, settings, and tools to fit the way you like to work.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">⬡</span>
+              <h3>Built on Debian</h3>
+              <p>Start with decades of Debian reliability, then add a curated desktop and developer toolkit with sensible defaults.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="details" aria-labelledby="toolkit-title">
+        <div class="details-intro">
+          <p class="eyebrow">02 / Ready to work</p>
+          <h2 id="toolkit-title">A useful toolkit from the first boot.</h2>
+          <p>Grizzly brings together everyday development, communication, and desktop essentials. Keep what works, change what doesn’t.</p>
+        </div>
+        <div>
+          <ul class="toolkit">
+            <li><strong>Develop:</strong> VSCodium, Git, Lazygit</li>
+            <li><strong>Build:</strong> Docker, Compose, Sandbox (sbx)</li>
+            <li><strong>Use the terminal:</strong> Foot</li>
+            <li><strong>Browse:</strong> Firefox</li>
+            <li><strong>Keep credentials:</strong> 1Password</li>
+            <li><strong>Connect:</strong> OpenSSH, disabled by default</li>
+            <li><strong>Manage files:</strong> Dolphin, Double Commander</li>
+            <li><strong>Meet and create:</strong> Easy Effects, Paint.software</li>
+            <li><strong>Everyday work:</strong> LibreOffice, 7-Zip</li>
+            <li><strong>Customize:</strong> system settings, updates, themes, keybindings</li>
+          </ul>
+          <p class="not-included"><strong>By design:</strong> Grizzly does not bundle an AI harness or a Docker management frontend. For container management, we prefer Portainer and Dozzle.</p>
+        </div>
+      </section>
+
+      <section id="getting-started" class="get-started" aria-labelledby="get-title">
+        <div class="get-panel">
+          <div>
+            <p class="eyebrow">03 / Getting started</p>
+            <h2 id="get-title">Your next workspace is taking shape.</h2>
+            <p>Grizzly is preparing for its first release. Download links and step-by-step installation instructions will appear here when they’re ready.</p>
+          </div>
+          <a class="button" href="https://github.com/tofalck/thegrizzlyos.org">Follow the project <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="details" aria-labelledby="roadmap-title">
+        <div class="details-intro">
+          <p class="eyebrow">On the roadmap</p>
+          <h2 id="roadmap-title">More choice at install time.</h2>
+          <p>We’re working toward a straightforward path from download to a ready-to-use developer desktop.</p>
+        </div>
+        <div>
+          <ul class="toolkit">
+            <li><strong>Fast installs:</strong> under one minute from ISO to a virtual machine disk in lab testing</li>
+            <li><strong>Install bundles:</strong> managed through the Grizzly CLI</li>
+            <li><strong>Choose as you install:</strong> a net installer with selectable bundles</li>
+            <li><strong>Hardware install time:</strong> still to be determined</li>
+          </ul>
+        </div>
+      </section>
     </main>
+    <footer class="site-footer">
+      <a class="brand" href="#top" aria-label="Grizzly home"><span class="brand-mark" aria-hidden="true">✳</span><span class="brand-name">Grizzly</span></a>
+      <span>Built for focus. Made by developers for developers.</span>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="#features">Features</a>
+        <a href="#getting-started">Documentation</a>
+        <a href="https://github.com/tofalck/thegrizzlyos.org">GitHub</a>
+        <a href="https://github.com/tofalck/thegrizzlyos.org/issues">Community</a>
+      </nav>
+    </footer>
   </body>
 </html>

@@ -1,68 +1,112 @@
-<header class="masthead">
-  <h1>GRIZZLY</h1>
-  <p>The developer friendly OS 🐾</p>
-</header>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow">A developer-friendly Linux distribution</p>
+    <h1 id="hero-title">Make room for <span>good work.</span></h1>
+    <p class="hero-lede">Grizzly is an opinionated Debian-based desktop built to keep your tools close and distractions out of the way.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="#getting-started">Get Grizzly <span aria-hidden="true">↗</span></a>
+      <a class="button button-secondary" href="#features">Explore features</a>
+    </div>
+    <p class="availability"><span class="status-dot" aria-hidden="true"></span>Downloads and installation guide are coming soon</p>
+  </div>
+  <div class="hero-art" aria-label="Grizzly mascot artwork">
+    <span class="art-orbit" aria-hidden="true"></span>
+    <span class="art-sun" aria-hidden="true"></span>
+    <img src="assets/grizzly-boot.png" alt="Grizzly, the friendly bear mascot, wearing glasses and a hoodie" width="600" height="548" />
+    <span class="art-caption">A focused workspace, ready for you</span>
+  </div>
+</section>
 
-<div class="artwork-stage" aria-label="Grizzly mascot artwork">
-  <img class="bear" src="assets/grizzly-boot.png" alt="Grizzly mascot wearing glasses and a hoodie" width="240" />
-</div>
+<section id="features" class="feature-wrap" aria-labelledby="features-title">
+  <div class="feature-panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">01 / The experience</p>
+        <h2 id="features-title">A desktop that gets out of your way.</h2>
+      </div>
+      <p>Thoughtful defaults and a practical set of tools help you get to your work without spending the day tuning your desktop.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-icon" aria-hidden="true">▦</span>
+        <h3>Stay in flow</h3>
+        <p>Hyprland and Quickshell bring a keyboard-friendly, tiling workflow with workspaces you can shape around your day.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon" aria-hidden="true">⌘</span>
+        <h3>Grizzly tools, built in</h3>
+        <p>Use the Grizzly CLI and MCP to manage your system, back up its inventory, and repeat your setup across machines.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon" aria-hidden="true">↻</span>
+        <h3>Safer system changes</h3>
+        <p>Manage APT packages with transactional commits and rollbacks, so changes are easier to track and recover.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon" aria-hidden="true">▣</span>
+        <h3>Meetings made easier</h3>
+        <p>TileToShare lets you share a specific tile during online meetings, keeping the rest of your workspace private.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon" aria-hidden="true">◌</span>
+        <h3>Yours to make your own</h3>
+        <p>Adjust the included themes, keybindings, settings, and tools to fit the way you like to work.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon" aria-hidden="true">⬡</span>
+        <h3>Built on Debian</h3>
+        <p>Start with decades of Debian reliability, then add a curated desktop and developer toolkit with sensible defaults.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-<section class="idea-card" aria-labelledby="idea-title">
-  <p class="eyebrow"><strong>01 / THE IDEA</strong></p>
+<section class="details" aria-labelledby="toolkit-title">
+  <div class="details-intro">
+    <p class="eyebrow">02 / Ready to work</p>
+    <h2 id="toolkit-title">A useful toolkit from the first boot.</h2>
+    <p>Grizzly brings together everyday development, communication, and desktop essentials. Keep what works, change what doesn’t.</p>
+  </div>
+  <div>
+    <ul class="toolkit">
+      <li><strong>Develop:</strong> VSCodium, Git, Lazygit</li>
+      <li><strong>Build:</strong> Docker, Compose, Sandbox (sbx)</li>
+      <li><strong>Use the terminal:</strong> Foot</li>
+      <li><strong>Browse:</strong> Firefox</li>
+      <li><strong>Keep credentials:</strong> 1Password</li>
+      <li><strong>Connect:</strong> OpenSSH, disabled by default</li>
+      <li><strong>Manage files:</strong> Dolphin, Double Commander</li>
+      <li><strong>Meet and create:</strong> Easy Effects, Paint.software</li>
+      <li><strong>Everyday work:</strong> LibreOffice, 7-Zip</li>
+      <li><strong>Customize:</strong> system settings, updates, themes, keybindings</li>
+    </ul>
+    <p class="not-included"><strong>By design:</strong> Grizzly does not bundle an AI harness or a Docker management frontend. For container management, we prefer Portainer and Dozzle.</p>
+  </div>
+</section>
 
-  <h2 id="idea-title">Created for focus</h2>
-  <p>Grizzly is an opinionated Linux distribution aiming to maximize developer productivity by removing nearly all normal desktop GUI and keeping only what's truly important: 100% focus on your work.</p>
-  <p>Grizzly is built on Debian, inheriting decades of rock-solid Linux, with performance optimized out of the box.</p>
-  <p>We release Grizzly as a quality product that's easy to live with yet flexible so you can make it your own.</p>
-  <p>Our philosophy in a nutshell is that we won't ship a lot of eye candy in Grizzly's user interface because we'd much rather focus on helping you achieve a solid outcome from the effort you invest in whatever project you are working on.</p>
-  <p>Therefore we'll just try to get out of your way instead of imposing something on you that you'll probably find obnoxious sooner or later.</p>
-  <p>The most important aspect of Grizzly' UI is the tiling manager which automagically docks your windows into place, and you can move them around to your liking, and pre-configure up to 10 workspaces for how you work.</p>
-  <p>In our view this is fundamentally a much better way to work for developers than the broken mouse centric desktop metaphor and a UI for every little detail you'll rarely change.</p>
-  <p>We don't like or need that level of detail hiding to do software development effeciently. In fact we find the opposite to be true most of the time since we just want to focus on creating value and not fiddling with UI settings day in and day out or having updated forced down the throat every other tuesday.</p>
-  <p>We built Grizzly mainly for our own needs but we hope you'll enjoy it too!</p>  
+<section id="getting-started" class="get-started" aria-labelledby="get-title">
+  <div class="get-panel">
+    <div>
+      <p class="eyebrow">03 / Getting started</p>
+      <h2 id="get-title">Your next workspace is taking shape.</h2>
+      <p>Grizzly is preparing for its first release. Download links and step-by-step installation instructions will appear here when they’re ready.</p>
+    </div>
+    <a class="button" href="https://github.com/tofalck/thegrizzlyos.org">Follow the project <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
 
-  <p><strong>Grizzly ships with:</strong></p>
-  <ul>
-    <li>Native features:
-      <ul>
-        <li>TileToShare for sharing specific tiles during online meetings</li>
-        <li>The Grizzly CLI and MCP for managing Grizzly itself, backing up its installed inventory state or restoring or replicating its state from a backup, and extending it to support your workflows. It includes first-class support for many tasks out of the box, including APT package management with transactional commit and rollback.</li>
-        <li>Theming</li>
-        <li>System settings and updates</li>
-      </ul>
-    </li>
-    <li>Hyprland and Quickshell</li>
-    <li>VS Codium - 100% the same as VS Code, but with MS specifics removed. Almost all VS Code extensions work here too.</li>
-    <li>Firefox</li>
-    <li>1Password</li>
-    <li>Foot</li>
-    <li>Git and Lazygit</li>
-    <li>Docker, Compose, and Sandbox (sbx)</li>
-    <li>OpenSSH, disabled and locked down so you can configure it as you like</li>
-    <li>Dolphin and Double Commander file managers</li>
-    <li>Paint.software, a fast paint.net alternative for Linux</li>
-    <li>Easy Effects for controlling your audio during meetings and recordings</li>
-    <li>7-Zip and LibreOffice</li>
-    <li>Keybindings, and more</li>
-  </ul>
-
-  <p><strong>We have deliberately chosen not to ship with:</strong></p>
-  <ul>
-    <li>Any AI harness</li>
-    <li>A Docker management frontend. We prefer Portainer over Docker Desktop, and Dozzle for viewing container logs.</li>
-  </ul>
-
-  <p><strong>Future plans:</strong></p>
-  <ul>
-    <li>Installable bundles managed through the CLI</li>
-    <li>A net installer that lets you choose bundles during installation</li>
-  </ul>
-
-  <p><strong>Grizzly installs extremely fast:</strong></p>
-  <ul>
-    <li>Lab test from ISO to a virtual machine disk: under 1 minute</li>
-    <li>Clean USB 3 install to real hardware: TBD</li>
-  </ul>
-
-  <p><strong>Shipping soon!</strong></p>
+<section class="details" aria-labelledby="roadmap-title">
+  <div class="details-intro">
+    <p class="eyebrow">On the roadmap</p>
+    <h2 id="roadmap-title">More choice at install time.</h2>
+    <p>We’re working toward a straightforward path from download to a ready-to-use developer desktop.</p>
+  </div>
+  <div>
+    <ul class="toolkit">
+      <li><strong>Fast installs:</strong> under one minute from ISO to a virtual machine disk in lab testing</li>
+      <li><strong>Install bundles:</strong> managed through the Grizzly CLI</li>
+      <li><strong>Choose as you install:</strong> a net installer with selectable bundles</li>
+      <li><strong>Hardware install time:</strong> still to be determined</li>
+    </ul>
+  </div>
 </section>
