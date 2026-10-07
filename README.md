@@ -47,13 +47,13 @@
   - Any docker management frontend. We like Portainer rather than Docker desktop. We like Dozzle too to view the docker logs.
 
   Future plans
-  - Bundles that you can install 
-  - A net installer that let's you pick those bundles at install time or at any point later. 
+  - Bundles that you can install using the cli
+  - A net installer that let's you pick those bundles at install time 
   
-  <p>Installs extremely fast.</p>
+  Grizzly installs extremely fast!
 
-  - lab tests from disk to disk: < 1 minute
-  - usb3 to disk: TBD
+  - lab tests from iso on disk to VM disk: < 1 minute
+  - Clean USB-3 install to real hardware: TBD
 
-  <p>Coming soon!</p>
+  Shipping soon!
 </section>
