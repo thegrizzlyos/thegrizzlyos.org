@@ -29,7 +29,7 @@
       </ul>
     </li>
     <li>Hyprland and Quickshell</li>
-    <li>VS Codium</li>
+    <li>VS Codium - 100% the same as VS Code, but with MS specifics removed. Almost all VS Code extensions work here too.</li>
     <li>Firefox</li>
     <li>1Password</li>
     <li>Foot</li>
