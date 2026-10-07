@@ -23,7 +23,7 @@
     <li>Native features:
       <ul>
         <li>TileToShare for sharing specific tiles during online meetings</li>
-        <li>The Grizzly CLI for managing your system, saving its state, and extending it to support your workflows. It includes first-class support for many tasks out of the box, including APT package management with transactional commit and rollback.</li>
+        <li>The Grizzly CLI for managing Grizzly itself, backing up its installed inventory state, and extending it to support your workflows. It includes first-class support for many tasks out of the box, including APT package management with transactional commit and rollback.</li>
         <li>Theming</li>
         <li>System settings and updates</li>
       </ul>
@@ -34,10 +34,10 @@
     <li>1Password</li>
     <li>Foot</li>
     <li>Git and Lazygit</li>
-    <li>Docker, Compose, and sandbox</li>
+    <li>Docker, Compose, and Sandbox (sbx)</li>
     <li>OpenSSH, disabled and locked down so you can configure it as you like</li>
     <li>Dolphin and Double Commander file managers</li>
-    <li>Paint software, a fast paint.net alternative for Linux</li>
+    <li>Paint.software, a fast paint.net alternative for Linux</li>
     <li>Easy Effects for controlling your audio during meetings and recordings</li>
     <li>7-Zip and LibreOffice</li>
     <li>Keybindings, and more</li>
