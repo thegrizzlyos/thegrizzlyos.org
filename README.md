@@ -12,8 +12,8 @@
 
   <h2 id="idea-title">Built for focus</h2>
   <p>Grizzly is an opinionated OS aiming to maximize AI development productivity by removing nearly all normal desktop GUI and keeping only what's truly important: 100% focus on your work.</p>
-  <p>The tiling concept makes your windows not dock into place, and you can have up to 10 workspaces pre-configured for how you work.</p>
-  <p>This is fundamentally a much better way to work for developers than the broken desktop metaphor.</p>
+  <p>The tiling manager automagically docks your windows into place, and you can move the them around to your liking, and pre-configure up to 10 workspaces for how you work.</p>
+  <p>In our view this is fundamentally a much better way to work for developers than the broken mouse centric desktop metaphor.</p>
   <p>Grizzly is built on Debian, inheriting decades of rock-solid Linux, with performance optimized out of the box.</p>
   <p>Our main goal is to release Grizzly as a quality product that's easy to live with yet flexible so you can make it your own.
 </p>
@@ -23,7 +23,7 @@
     <li>Native features:
       <ul>
         <li>TileToShare for sharing specific tiles during online meetings</li>
-        <li>The Grizzly CLI for managing Grizzly itself, backing up its installed inventory state, and extending it to support your workflows. It includes first-class support for many tasks out of the box, including APT package management with transactional commit and rollback.</li>
+        <li>The Grizzly CLI and MCP for managing Grizzly itself, backing up its installed inventory state, and extending it to support your workflows. It includes first-class support for many tasks out of the box, including APT package management with transactional commit and rollback.</li>
         <li>Theming</li>
         <li>System settings and updates</li>
       </ul>
