@@ -4,7 +4,7 @@
 </header>
 
 <div class="artwork-stage" aria-label="Grizzly mascot artwork">
-  <img class="bear" src="assets/grizzly-boot.png" alt="Grizzly mascot wearing glasses and a hoodie" width="300" />
+  <img class="bear" src="assets/grizzly-boot.png" alt="Grizzly mascot wearing glasses and a hoodie" width="240" />
 </div>
 
 <section class="idea-card" aria-labelledby="idea-title">
@@ -15,7 +15,6 @@
   <p>The tiling concept makes your apps dock into place, and you can have up to 10 workspaces pre-configured for how you work.</p>
   <p>This is fundamentally a much better way to work for developers than the broken desktop metaphor.</p>
   <p>Grizzly is built on Debian, inheriting decades of rock-solid Linux, with performance optimized out of the box.</p>
-  <p>Built-in tools for tile sharing.</p>
   <p>Installs extremely fast.</p>
   <p>Coming soon!</p>
 </section>
