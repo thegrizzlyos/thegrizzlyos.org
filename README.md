@@ -18,7 +18,7 @@
   <p>In our view this is fundamentally a much better way to work for developers than the broken mouse centric desktop metaphor.</p>
   
 
-  <p>Grizzly ships with:</p>
+  <p><strong>Grizzly ships with:</strong></p>
   <ul>
     <li>Native features:
       <ul>
