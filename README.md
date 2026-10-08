@@ -91,7 +91,7 @@
       <h2 id="get-title">Your next workspace is taking shape.</h2>
       <p>Grizzly is preparing for its first release. Download links and step-by-step installation instructions will appear here when they’re ready.</p>
     </div>
-    <a class="button" href="https://github.com/tofalck/thegrizzlyos.org">Follow the project <span aria-hidden="true">↗</span></a>
+    <a class="button" href="https://github.com/thegrizzlyos/thegrizzlyos.org">Follow the project <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
