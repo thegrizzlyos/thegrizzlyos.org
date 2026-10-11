@@ -185,9 +185,9 @@
     <main id="top" class="page">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">A developer-friendly Linux distribution</p>
-          <h1 id="hero-title">Make room for <span>good work.</span></h1>
-          <p class="hero-lede">Grizzly is an opinionated Debian-based desktop built to keep your tools close and distractions out of the way.</p>
+          <p class="eyebrow">An Linux distribution for the agentic age</p>
+          <h1 id="hero-title">Making the most of your <span>buzy paws</span></h1>
+          <p class="hero-lede">Grizzly is a privacy oriented Debian-based desktop built to keep your tools close and distractions out of the way.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#getting-started">Get Grizzly <span aria-hidden="true">↗</span></a>
             <a class="button button-secondary" href="#features">Explore features</a>
@@ -207,7 +207,7 @@
           <div class="section-heading">
             <div>
               <p class="eyebrow">01 / The experience</p>
-              <h2 id="features-title">A desktop that gets out of your way.</h2>
+              <h2 id="features-title">A desktop that gets out of your way</h2>
             </div>
             <p>Thoughtful defaults and a practical set of tools help you get to your work without spending the day tuning your desktop.</p>
           </div>
@@ -220,27 +220,27 @@
             <article class="feature-card">
               <span class="feature-icon" aria-hidden="true">⌘</span>
               <h3>Grizzly tools, built in</h3>
-              <p>Use the Grizzly CLI and MCP to manage your system, back up its inventory, and repeat your setup across machines.</p>
+              <p>Use the Grizzly CLI and MCP to manage your system with APT transactions, back up its inventory, and repeat your setup across machines.</p>
             </article>
             <article class="feature-card">
               <span class="feature-icon" aria-hidden="true">↻</span>
-              <h3>Safer system changes</h3>
-              <p>Manage APT packages with transactional commits and rollbacks, so changes are easier to track and recover.</p>
+              <h3>Safer agentic development</h3>
+              <p>Docker Sandbox (sbx) is included and setting it up per repo is a breeze using Grizzly's MCP.</p>
             </article>
             <article class="feature-card">
               <span class="feature-icon" aria-hidden="true">▣</span>
               <h3>Meetings made easier</h3>
-              <p>TileToShare lets you share a specific tile during online meetings, keeping the rest of your workspace private.</p>
+              <p>Our TileToShare lets you share a specific tile during online meetings, keeping the rest of your workspace private.</p>
             </article>
             <article class="feature-card">
               <span class="feature-icon" aria-hidden="true">◌</span>
-              <h3>Yours to make your own</h3>
+              <h3>Uniquely yours</h3>
               <p>Adjust the included themes, keybindings, settings, and tools to fit the way you like to work.</p>
             </article>
             <article class="feature-card">
               <span class="feature-icon" aria-hidden="true">⬡</span>
               <h3>Built on Debian</h3>
-              <p>Start with decades of Debian reliability, then add a curated desktop and developer toolkit with sensible defaults.</p>
+              <p>We added a curated desktop and a productivity focused developer toolkit on top of the decades of reliability that is Debian.</p>
             </article>
           </div>
         </div>
@@ -249,23 +249,31 @@
       <section class="details" aria-labelledby="toolkit-title">
         <div class="details-intro">
           <p class="eyebrow">02 / Ready to work</p>
-          <h2 id="toolkit-title">A useful toolkit from the first boot.</h2>
+          <h2 id="toolkit-title">A powerful toolkit from the first boot</h2>
           <p>Grizzly brings together everyday development, communication, and desktop essentials. Keep what works, change what doesn’t.</p>
+          
         </div>
         <div>
           <ul class="toolkit">
-            <li><strong>Develop:</strong> VSCodium, Git, Lazygit</li>
-            <li><strong>Build:</strong> Docker, Compose, Sandbox (sbx)</li>
-            <li><strong>Use the terminal:</strong> Foot</li>
-            <li><strong>Browse:</strong> Firefox</li>
-            <li><strong>Keep credentials:</strong> 1Password</li>
-            <li><strong>Connect:</strong> OpenSSH, disabled by default</li>
-            <li><strong>Manage files:</strong> Dolphin, Double Commander</li>
-            <li><strong>Meet and create:</strong> Easy Effects, Paint.software</li>
-            <li><strong>Everyday work:</strong> LibreOffice, 7-Zip</li>
-            <li><strong>Customize:</strong> system settings, updates, themes, keybindings</li>
+            <li><strong>Develop:</strong> <p>VSCodium, Bruno</p></li>
+            <li><strong>Build:</strong> <p>Docker, Compose, Sandbox (sbx)</p></li>
+            <li><strong>Terminal tools:</strong> <p>grizzly CLI/MCP, Foot, Zoxide (z navigation), Git, Lazygit</p></li>
+            <li><strong>Storage:</strong> <p>SyncThing, Obsidian</p></li>
+            <li><strong>Safety:</strong> <p>1Password, ClamAV</p></li>
+            <li><strong>Connect:</strong> <p>OpenSSH (disabled by default), RustConn, Tailscale</p></li>
+            <li><strong>Manage files:</strong> <p>Dolphin, Double Commander</p></li>
+            <li><strong>Meet:</strong> <p>Zoom, TileToShare</p></li>
+            <li><strong>Everyday work:</strong> <p>Firefox, LibreOffice, Easy Effects, OBS, 7-Zip</p></li>
+            <li><strong>Customize:</strong> <p>system settings, updates, themes, keybindings</p></li>
           </ul>
-          <p class="not-included"><strong>By design:</strong> Grizzly does not bundle an AI harness or a Docker management frontend. For a safe agentic development experience we strongly recommend something like the Docker Sandbox so your agent can run wild with less risk of something harmful being done on your system without you knowing about it. For container management, we prefer tools like Portainer and Dozzle.</p>
+          <div class="not-included"><strong>NB:</strong>
+            <p>Grizzly does not bundle an AI harness or a Docker management frontend.</p>
+            <p>For container management, we prefer tools like Portainer and Dozzle.</p>
+            <p>For a safer agentic development experience we strongly recommend something like the Docker Sandbox which we do bundle, so your agents can run wild with less risk of something unintended being done on your system without you knowing about it. Docker Sandbox has the major AI harnesseses built in.</p>
+            <p>We recommend that you install you dev toolchains inside the Docker Sandboxes or use pre-made docker containers to keep your OS relatively clean from all that. Docker Sandbox let's you use Docker in Docker, so those containers can be used from inside the Sandbox.</p>
+            <p>We also like Herdr to wrap your harnesseses so you can mix and match across your model providers and through plugins it can also use Docker Sandboxes to isolate the agentic work from your machine.</p>
+            <p>Grizzly encrypts the entire disk when it is installed and prompts you for your password to decrypt the disk when it starts and then logs you directly into you desktop. Encryption protects your digital values in case of theft.</p>
+          </div>
         </div>
       </section>
 
@@ -273,7 +281,7 @@
         <div class="get-panel">
           <div>
             <p class="eyebrow">03 / Getting started</p>
-            <h2 id="get-title">Your next workspace is taking shape.</h2>
+            <h2 id="get-title">Your next workspace is taking shape</h2>
             <p>Grizzly is preparing for its first release. Download links and step-by-step installation instructions will appear here when they’re ready.</p>
           </div>
           <a class="button" href="https://github.com/thegrizzlyos/thegrizzlyos.org">Follow the project <span aria-hidden="true">↗</span></a>
@@ -283,12 +291,12 @@
       <section class="details" aria-labelledby="roadmap-title">
         <div class="details-intro">
           <p class="eyebrow">On the roadmap</p>
-          <h2 id="roadmap-title">More choice at install time.</h2>
+          <h2 id="roadmap-title">More choice at install time</h2>
           <p>We’re working toward a straightforward path from download to a ready-to-use developer desktop.</p>
         </div>
         <div>
           <ul class="toolkit">
-            <li><strong>Fast installs:</strong> under one minute from ISO to a virtual machine disk in lab testing</li>
+            <li><strong>Fast installs:</strong> About one minute from ISO to a virtual machine disk in lab testing</li>
             <li><strong>Install bundles:</strong> managed through the Grizzly CLI</li>
             <li><strong>Choose as you install:</strong> a net installer with selectable bundles</li>
             <li><strong>Hardware install time:</strong> still to be determined</li>
