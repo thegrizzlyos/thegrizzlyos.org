@@ -110,7 +110,6 @@
       .toolkit { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin: 0; padding: 0; list-style: none; }
       .toolkit li { padding: 15px 0; border-bottom: 1px solid var(--line); color: #bdc8ce; font-size: 14px; }
       .toolkit strong { color: var(--ink); }
-      .not-included { margin-top: 25px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 
       .get-started { padding: 0 32px 92px; }
       .get-panel { width: min(1200px, 100%); margin: 0 auto; padding: clamp(30px, 6vw, 68px); border: 1px solid #405767; border-radius: 28px; background: radial-gradient(ellipse at 80% 0%, rgba(95, 140, 158, .22), transparent 34rem), linear-gradient(125deg, #2b4050, #243746 66%, #263b42); color: #edf3f5; display: flex; align-items: center; justify-content: space-between; gap: 32px; box-shadow: 0 26px 75px rgba(4, 10, 17, .24); }
@@ -251,7 +250,6 @@
           <p class="eyebrow">02 / Ready to work</p>
           <h2 id="toolkit-title">A powerful toolkit from the first boot</h2>
           <p>Grizzly brings together everyday development, communication, and desktop essentials. Keep what works, change what doesn’t.</p>
-          
         </div>
         <div>
           <ul class="toolkit">
@@ -266,21 +264,31 @@
             <li><strong>Everyday work:</strong> <p>Firefox, LibreOffice, Easy Effects, OBS, 7-Zip</p></li>
             <li><strong>Customize:</strong> <p>system settings, updates, themes, keybindings</p></li>
           </ul>
-          <div class="not-included"><strong>NB:</strong>
-            <p>Grizzly does not bundle an AI harness or a Docker management frontend.</p>
-            <p>For container management, we prefer tools like Portainer and Dozzle.</p>
-            <p>For a safer agentic development experience we strongly recommend something like the Docker Sandbox which we do bundle, so your agents can run wild with less risk of something unintended being done on your system without you knowing about it. Docker Sandbox has the major AI harnesseses built in.</p>
-            <p>We recommend that you install you dev toolchains inside the Docker Sandboxes or use pre-made docker containers to keep your OS relatively clean from all that. Docker Sandbox let's you use Docker in Docker, so those containers can be used from inside the Sandbox.</p>
-            <p>We also like Herdr to wrap your harnesseses so you can mix and match across your model providers and through plugins it can also use Docker Sandboxes to isolate the agentic work from your machine.</p>
-            <p>Grizzly encrypts the entire disk when it is installed and prompts you for your password to decrypt the disk when it starts and then logs you directly into you desktop. Encryption protects your digital values in case of theft.</p>
-          </div>
+        </div>
+      </section>
+
+      <section class="details" aria-labelledby="notes-title">
+        <div class="details-intro">
+          <p class="eyebrow">03 / Notes</p>
+          <h2 id="notes-title">A safer, cleaner workspace</h2>
+          <p>Grizzly keeps your host system focused while giving you room to choose how you build and run AI tools.</p>
+        </div>
+        <div>
+          <ul class="toolkit">
+            <li><strong>Container management:</strong> We recommend Portainer and Dozzle for Docker and log management (not included).</li>
+            <li><strong>AI tools:</strong> Grizzly does not bundle any AI harness. Docker Sandbox is included and supports the major harnesses.</li>
+            <li><strong>Safer development:</strong> Run agents in Docker Sandbox to reduce the risk of unintended changes to your system.</li>
+            <li><strong>Keep the host clean:</strong> Install development toolchains in Docker Sandbox or use ready-made containers. Sandbox supports Docker in Docker, so you can run those containers inside it.</li>
+            <li><strong>Choose your providers:</strong> A tool like Herdr (not included) wraps AI harnesses so you can mix model providers. Its plugins can also use Docker Sandbox to isolate agent work.</li>
+            <li><strong>Disk encryption:</strong> Grizzly encrypts the full disk during installation. Enter your password at startup to unlock it, then go straight to the desktop. Encryption helps protect your data if the device is stolen.</li>
+          </ul>
         </div>
       </section>
 
       <section id="getting-started" class="get-started" aria-labelledby="get-title">
         <div class="get-panel">
           <div>
-            <p class="eyebrow">03 / Getting started</p>
+            <p class="eyebrow">04 / Getting started</p>
             <h2 id="get-title">Your next workspace is taking shape</h2>
             <p>Grizzly is preparing for its first release. Download links and step-by-step installation instructions will appear here when they’re ready.</p>
           </div>
